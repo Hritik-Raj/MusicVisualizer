@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		55950018264896AC00B92A40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55950017264896AC00B92A40 /* Preview Assets.xcassets */; };
 		55950023264896AC00B92A40 /* MusicVisualizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55950022264896AC00B92A40 /* MusicVisualizerTests.swift */; };
 		5595002E264896AC00B92A40 /* MusicVisualizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595002D264896AC00B92A40 /* MusicVisualizerUITests.swift */; };
+		5595003F2648970D00B92A40 /* FFTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595003E2648970D00B92A40 /* FFTView.swift */; };
+		559500442648977100B92A40 /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559500432648977100B92A40 /* Conductor.swift */; };
+		5595004D2648986C00B92A40 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5595004C2648986C00B92A40 /* AudioKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,8 @@
 		55950029264896AC00B92A40 /* MusicVisualizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicVisualizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5595002D264896AC00B92A40 /* MusicVisualizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVisualizerUITests.swift; sourceTree = "<group>"; };
 		5595002F264896AC00B92A40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5595003E2648970D00B92A40 /* FFTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTView.swift; sourceTree = "<group>"; };
+		559500432648977100B92A40 /* Conductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5595004D2648986C00B92A40 /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,8 @@
 			children = (
 				55950010264896AA00B92A40 /* MusicVisualizerApp.swift */,
 				55950012264896AA00B92A40 /* ContentView.swift */,
+				5595003E2648970D00B92A40 /* FFTView.swift */,
+				559500432648977100B92A40 /* Conductor.swift */,
 				55950014264896AC00B92A40 /* Assets.xcassets */,
 				55950019264896AC00B92A40 /* Info.plist */,
 				55950016264896AC00B92A40 /* Preview Content */,
@@ -146,6 +154,9 @@
 			dependencies = (
 			);
 			name = MusicVisualizer;
+			packageProductDependencies = (
+				5595004C2648986C00B92A40 /* AudioKit */,
+			);
 			productName = MusicVisualizer;
 			productReference = 5595000D264896AA00B92A40 /* MusicVisualizer.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 55950004264896AA00B92A40;
+			packageReferences = (
+				5595004B2648986C00B92A40 /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = 5595000E264896AA00B92A40 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5595003F2648970D00B92A40 /* FFTView.swift in Sources */,
 				55950013264896AA00B92A40 /* ContentView.swift in Sources */,
 				55950011264896AA00B92A40 /* MusicVisualizerApp.swift in Sources */,
+				559500442648977100B92A40 /* Conductor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5595004B2648986C00B92A40 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5595004C2648986C00B92A40 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5595004B2648986C00B92A40 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 55950005264896AA00B92A40 /* Project object */;
 }
